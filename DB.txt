@@ -1,0 +1,34 @@
+Create databsae musicworld;
+use musicworld;
+
+Create table Artists(
+    ArtistId int,
+    Name Varchar(50),
+    DOB Varchar(150),
+    Bio Varchar(200),
+    PRIMARY KEY (Name)
+);
+
+Create table Songs(
+    songId int not null auto_increment primary key,
+    songName Varchar(50)not null,
+    artistName Varchar(200)not null,
+    rating int,
+    FOREIGN KEY (songName) REFERENCES songImages(songName)
+);
+
+ Create table songImages(
+    songName Varchar(150) not null primary key,
+    image Varchar(150) not null,
+    DOR Varchar(150),
+    rating int
+);
+
+
+Create table Users(
+    UserId int auto_increment not null primary key,
+    Name Varchar(50),
+    Email Varchar(50) unique,
+    password Varchar(150)
+);
+
