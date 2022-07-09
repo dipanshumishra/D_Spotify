@@ -1,5 +1,11 @@
 Create databsae musicworld;
-use musicworld;
+
+Create table Users(
+    UserId int auto_increment not null primary key,
+    Name Varchar(50),
+    Email Varchar(50) unique,
+    password Varchar(150)
+);
 
 Create table Artists(
     ArtistId int,
@@ -25,10 +31,4 @@ Create table Songs(
 );
 
 
-Create table Users(
-    UserId int auto_increment not null primary key,
-    Name Varchar(50),
-    Email Varchar(50) unique,
-    password Varchar(150)
-);
 
